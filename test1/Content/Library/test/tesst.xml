@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow id="4132ff96-3005-4cf2-a8aa-a8b362e135f7">
+  <descriptionCdata><![CDATA[4132ff96-3005-4cf2-a8aa-a8b362e135f7.8d90f42f-0a19-47fb-9630-c1b708bd285e.description=The \u201CHow do I\: Create a parallel flow\u201D flow demonstrates how to use a parallel split step. \n\n<pre>\nThis flow was created using the following OO operations\:\n- \u201CRandom Number Generator\u201D from the Library/Utility Operations folder\n- \u201CGet Current Date and Time\u201D from the  Library/Utility Operations/Date and Time folder\n- \u201CDisplay Message\u201D from the Library/Utility Operations folder\n\nThe flow contains the following steps\:\n\n1. The parallel split step starts, running the two lanes simultaneously.     \n\n2. The \u201CGenerate Random Number\u201D  step generates a random number.\n     Input\: "max"\n     Gets value from\:  constant value \u201C100\u201D\n\n     Input\: "min"\n     Gets value from\:  constant value \u201C1\u201D\n \n     Places result in\: flow variable "randomNumber" \n\n3. The \u201CGet Current Date and Time\u201D step captures the current date and time.\n     Places result in\:   flow variable  \u201CdateTime\u201D\n\n4. The \u201CDisplay Message\u201D step displays a message to the user.\n     Input\:  message\n     Gets value from\:  constant  \n         " Parallel split step completed. \n         The current date/time is ${dateTime}.  \n          A random number\: ${randomNumber}."\n   \n   Places result in\: default flow variable "message"\n</pre>
+]]></descriptionCdata>
+  <annotation></annotation>
+  <name>tesst</name>
+  <categories/>
+  <inputs/>
+  <possibleResponses>
+    <opResponse id="bcee036a-f35d-4556-8e94-17cc523077f7">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="3734b192-b261-4740-9950-44af55b39142">
+    <annotation></annotation>
+    <name>FailureMessage</name>
+    <fieldName>FailureMessage</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="3ff0fc16-c5cd-4f64-b5ee-9778440ca8ef">
+    <baseIcon>flow.png</baseIcon>
+    <basePath>System</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <callouts/>
+  <checkPointFlow>true</checkPointFlow>
+  <compatibleRuntimeContext>false</compatibleRuntimeContext>
+  <historyCheckPointFlow>true</historyCheckPointFlow>
+  <steps>
+    <step id="8d90f42f-0a19-47fb-9630-c1b708bd285e">
+      <annotation>4132ff96-3005-4cf2-a8aa-a8b362e135f7.8d90f42f-0a19-47fb-9630-c1b708bd285e.description</annotation>
+      <name>How do I- Create a parallel flow</name>
+      <bounds>
+        <x>250.0</x>
+        <y>222.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="c7cc68a2-d67f-4eb0-ae87-35e1fa55192d">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>8623da91-0a58-42d1-9df2-c47b1776f413</refId>
+          </destination>
+          <source>
+            <refId>8d90f42f-0a19-47fb-9630-c1b708bd285e</refId>
+          </source>
+          <positions>
+            <point>
+              <x>300.0</x>
+              <y>256.0</y>
+            </point>
+            <point>
+              <x>404.0</x>
+              <y>136.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>d012e1c3-704f-426f-a380-b2425a166d39</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
+    <returnStep id="8623da91-0a58-42d1-9df2-c47b1776f413">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>354.0</x>
+        <y>102.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="c8dfb3b7-2e93-4d6e-971f-7384906ae3cf">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>8623da91-0a58-42d1-9df2-c47b1776f413</refId>
+          </destination>
+          <source>
+            <refId>8623da91-0a58-42d1-9df2-c47b1776f413</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
+  </steps>
+  <startSteps>8d90f42f-0a19-47fb-9630-c1b708bd285e</startSteps>
+</flow>
